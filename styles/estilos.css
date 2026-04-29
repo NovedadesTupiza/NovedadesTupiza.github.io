@@ -17,12 +17,12 @@
 
 }
 :root {
-    --bg-color: #f7ddbe;
-    --second-bg-color: #ffffff;
-    --third-bg-color:#ffffff;
-    --text-color: #3c361d;
+    --bg-color: #fff7f1;
+    --second-bg-color: #291814;
+    --third-bg-color:#70382c;
+    --text-color: #402e32;
     --main-color: #49C692;
-    --secondary-color: #ffffff
+    --secondary-color: #de762a;
     
 
 }
@@ -40,7 +40,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: black;
+    background: brown;
     height: 70px;
     
     margin: auto;
@@ -71,7 +71,7 @@ body {
 }
 .navbar a {
     font-size: 1.7rem;
-    color: var(--text-color);
+    color: var(--bg-color);
     font-weight: 500;
     margin-left: 3.5rem;
     
@@ -80,7 +80,7 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color);
+    color: var(--second-bg-color-color);
     
     
 }

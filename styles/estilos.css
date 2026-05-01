@@ -4,41 +4,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
-/**movil**/
+
+
+
 @media (max-width: 767px){
-    .desktop{
-        display: none;
-
-    }
-    .tablet{
-        display: none;
-
-    }
+    
     
 }
 /**tablet**/
-@media (max-width: 768px) and (max-width:990px){
-    .desktop{
-        display: none;
-
-    }
-    
-    .movil{
-        display: none;
-
-    }
+@media (min-width: 768px) and (max-width:990px){
+   
 }
 /**escritorio**/
 @media (max-width: 991px){
     
-    .tablet{
-        display: none;
-
-    }
-    .movil{
-        display: none;
-
-    }
+   
 }
 
 
@@ -112,6 +92,8 @@ body {
     color: var(--bg-color);
     font-weight: 500;
     margin-left: 2.5rem;
+    width: 45px;
+    height: 35px;
     
     
     
@@ -124,12 +106,61 @@ body {
     
 }
 
-#menu-icon {
+
+
+
+/**ocultar checkbox**/
+#menu-toggle {
+    display: none;
+}
+
+/* Icono hamburguesa */
+.menu-icon {
     font-size: 3.6rem;
-    color: var(--text-color);
+    color: #fff;
     cursor: pointer;
     display: none;
 }
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+        z-index: 101;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.3s ease;
+        z-index: 100;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+.navbar a {
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    /* AQUÍ ESTÁ LA MAGIA 👇 */
+    #menu-toggle:checked ~ .navbar {
+        right: 0;
+    }
+}
+
+
+
+
+
+
 
 section {
     min-height: 100vh;

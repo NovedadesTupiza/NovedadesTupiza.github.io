@@ -73,7 +73,7 @@ body {
     font-size: 1.7rem;
     color: var(--bg-color);
     font-weight: 500;
-    margin-left: 3.5rem;
+    margin-left: 2.5rem;
     
     
 }
@@ -343,10 +343,11 @@ span {
     font-size: 2.2rem;
     text-shadow: 1px 1px 1px #a5a97e;
     padding-top: 5px;
-    margin-top: 20%;
+    margin-top: 50%;
     margin-bottom: 25px;
     box-shadow: 2px 2px 2px 2px #B1B050;
     text-align: center;
+
     
    
 }
@@ -404,9 +405,11 @@ span {
     font-size: 2.2rem;
     text-shadow: 1px 1px 1px #a5a97e;
     padding-top: 25px;
-    margin-top: 0%;
+    margin-top: 20%;
     margin-bottom: 25px;
     box-shadow: 2px 2px 2px 2px #B1B050;
+    text-align: center;
+    
     
     
 }
@@ -422,6 +425,7 @@ span {
 .about-content p {
     font-size: 1.5rem;
     margin: .5rem 0 5rem;
+   
 
 }
 .about .heading{
@@ -457,7 +461,7 @@ span {
     padding-left: 22px;
     padding-right: 22px;
     padding-top:0%;
-    max-width: 60rem;
+    
     overflow: auto;
     
 }
@@ -519,12 +523,19 @@ span {
 .educacion-content .content h3 {
     font-size: 2rem;
     padding-top: 2rem;
+    text-align: center;
+    
 }
 
 .educacion-content .content p {
     font-size: 1.5rem;
     padding-top: .2rem;
     padding-bottom: 10px;
+    margin-left: 25px;
+    
+    
+}
+.content{
     
 }
 

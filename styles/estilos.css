@@ -4,6 +4,50 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+/**movil**/
+@media (max-width: 767px){
+    .desktop{
+        display: none;
+
+    }
+    .tablet{
+        display: none;
+
+    }
+    .movil{
+
+    }
+}
+/**tablet**/
+@media (max-width: 768px) and (max-width:990px){
+    .desktop{
+        display: none;
+
+    }
+    .tablet{
+
+    }
+    .movil{
+        display: none;
+
+    }
+}
+/**escritorio**/
+@media (max-width: 767px){
+    .desktop{
+
+    }
+    .tablet{
+        display: none;
+
+    }
+    .movil{
+        display: none;
+
+    }
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -74,7 +118,7 @@ body {
     color: var(--bg-color);
     font-weight: 500;
     margin-left: 2.5rem;
-    overflow: auto;
+    
     
     
 }

@@ -14,9 +14,7 @@
         display: none;
 
     }
-    .movil{
-
-    }
+    
 }
 /**tablet**/
 @media (max-width: 768px) and (max-width:990px){
@@ -24,19 +22,15 @@
         display: none;
 
     }
-    .tablet{
-
-    }
+    
     .movil{
         display: none;
 
     }
 }
 /**escritorio**/
-@media (max-width: 767px){
-    .desktop{
-
-    }
+@media (max-width: 991px){
+    
     .tablet{
         display: none;
 

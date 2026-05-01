@@ -74,6 +74,7 @@ body {
     color: var(--bg-color);
     font-weight: 500;
     margin-left: 2.5rem;
+    overflow: auto;
     
     
 }

@@ -132,7 +132,7 @@ section {
     font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: 1px var(--second-bg-color-color);
+    -webkit-text-stroke: 1px var(--second-bg-color);
     
 }
 
@@ -457,6 +457,8 @@ span {
     padding-left: 22px;
     padding-right: 22px;
     padding-top:0%;
+    max-width: 60rem;
+    overflow: auto;
     
 }
 
@@ -629,7 +631,7 @@ button {
     width: 95%;
     padding-left: 22px;
     padding-right: 5px;
-    
+    }
 
 
 

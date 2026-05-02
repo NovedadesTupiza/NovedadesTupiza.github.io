@@ -7,9 +7,15 @@
 
 
 
-@media (max-width: 767px){
-    
-    
+@media (max-width: 768px){
+    .educacion-column {
+        padding: 0 8px;
+    }
+
+    .educacion-content .content p {
+        max-width: 100%;
+        padding: 0;
+    }
 }
 /**tablet**/
 @media (min-width: 768px) and (max-width:990px){
@@ -40,7 +46,7 @@
     --third-bg-color:#70382c;
     --text-color: #402e32;
     --main-color: #49C692;
-    --secondary-color: #de762a;
+    --secondary-color: #ffffff;
     
 
 }
@@ -117,18 +123,35 @@ body {
 /* Icono hamburguesa */
 .menu-icon {
     font-size: 3.6rem;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     display: none;
 }
 
+.menu-icon span {
+    color: #ffffff; /* blanco inicial */
+    transition: 0.3s ease;
+}
 
+.menu-icon:hover span {
+    color: var(--main-color);
+}
+
+.menu-toggle:checked ~ .menu-icon span{
+    color: var(--main-color); /* tu verde */
+   
+}
+
+.menu-toggle:checked .menu-icon span::before {
+    content: "close";
+}
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
     .menu-icon {
         display: block;
         z-index: 101;
+        transition: 0.3s ease;
     }
 
     .navbar {
@@ -171,9 +194,10 @@ section {
     display:flex;
     align-items: center;
     padding: 0 9%;
-    background: url("/images/Fondo1.jpg") no-repeat;
+    background: url("/images/pexels-985235800-20368729.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
     
     
 }
@@ -189,7 +213,8 @@ section {
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
-    
+    text-shadow: 1px 1px  black;
+    color: var(--bg-color);
     
 }
 
@@ -202,7 +227,8 @@ section {
     font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: 1px var(--second-bg-color);
+    -webkit-text-stroke: 1px var(--secondary-color);
+   
     
 }
 
@@ -213,6 +239,7 @@ section {
     text-align: justify;
     padding-bottom: 50px;
     text-shadow: 1px 1px  black;
+    color: #ffffff;
    
 }
 .content p{
@@ -230,6 +257,7 @@ section {
     align-items: center;
     width: 34rem;
     height: 4.4rem;
+    margin-top: 6rem;
     
 }
 
@@ -244,6 +272,8 @@ section {
     border: .2rem solid #62b3a8;
     border-radius: .95rem;
     font-size: 1.6rem;
+    line-height: 1.2;
+
     font-weight: 600;
     letter-spacing: .15rem;
     color: var(--bg-color);
@@ -252,6 +282,7 @@ section {
     transition: .5s;
     box-shadow: 2px 2px 3px #62b3a8;
     margin-bottom: 20px;
+   
     
     
 }
@@ -296,11 +327,15 @@ section {
 }
 
 .inicio-social{
-    position: absolute;
-    bottom: -11rem;
+    position:absolute;
+    bottom: 2rem;
+    right: 2rem;
+    left: 9%;
+    z-index: 1000;
     width: 170px;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .inicio-social a{
@@ -424,7 +459,7 @@ span {
 .about-img p {
     font-size: 1.5rem;
     margin: .5rem 0 5rem;
-  
+    
 
 }
 
@@ -456,30 +491,36 @@ span {
     text-align: center;
     color: #384B41;
     flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    
     
 }
 
 .about-content img {
     position: relative;
-    width: 800px;
-    height: 800px;
+    margin: 15px auto;
+    width: 300px;
+    height: auto;
     
-    display: flex;
+    
     justify-content: center;
     align-items: center;
-    margin top: 25px;
-     }
+    
+    
+}
 
 
 .about-content h3 {
     font-size: 2.2rem;
     text-shadow: 1px 1px 1px #a5a97e;
     padding-top: 25px;
-    margin-top: 20%;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom:15px;
     box-shadow: 2px 2px 2px 2px #B1B050;
     text-align: center;
-    
+     overflow: auto;
     
     
 }
@@ -494,7 +535,11 @@ span {
 }
 .about-content p {
     font-size: 1.5rem;
-    margin: .5rem 0 5rem;
+    margin: 2rem 0 5rem;
+    margin-bottom: -4rem;
+    text-align: justify;
+    line-height: 1.6;
+
    
 
 }
@@ -528,12 +573,18 @@ span {
 }
 .educacion-column{
     
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top:0%;
     
-    overflow: auto;
+    overflow: visible;
     
+}
+
+.educacion-row {
+    width: 100%;
+    max-width: 900px;  /* 🔥 controla el ancho real */
+    margin: 0 auto;    /* centra */
 }
 
 .educacion .educacion-row {
@@ -542,9 +593,10 @@ span {
     gap: 5rem;
 }
 
-.educacion-row .educacion-column {
+.educacion-row .educacion-column p {
     
 }
+
 
 .educacion-column .title {
     font-size:2.5rem;
@@ -561,15 +613,26 @@ span {
 
  .educacion .heading{
     padding-bottom:0%;
+    margin-top: -3rem;
+    margin-bottom: -1rem;
  }
 
 .educacion-column .educacion-box {
-    border-left: .2rem solid var(--main-color);
+
+
+
 }
 
+.educacion-content .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
 .educacion-box .educacion-content {
     position: relative;
     padding-left: 2rem;
+    
 }
 .educacion-content .content .year {
     font-size: 1.5rem;
@@ -601,8 +664,10 @@ span {
     font-size: 1.5rem;
     padding-top: .2rem;
     padding-bottom: 10px;
-    margin-left: 25px;
-    
+    text-align:justify;
+    margin: 0 auto;
+    max-width: 700px;
+    margin-bottom: -4rem;
     
 }
 .content{
@@ -659,17 +724,18 @@ button {
     font-size: 1.5rem;
     padding-top: .3rem;
     padding-right:5px;
-    padding-left: 22px;
-    width: 95%;
+    padding: 0 10px;
+    width: 100%;
     text-shadow: 0px 0px  black;
+     box-sizing: border-box;
 }
 
 .skills .skills-content p {
     font-size: 1.5rem;
     padding-top: .5rem;
-    width: 95%;
-    padding-left: 22px;
-    padding-right: 5px;
+    width: 100%;
+    padding: 0;
+   
     
 }
 .skills .titles {
@@ -687,12 +753,13 @@ button {
     padding-bottom: 0px;
     border-radius: 5px;
     
+    
 }
 .otros{
     text-align: justify;
     
     background: url("/images/fondofinal3.png") no-repeat;
-    background-color:black;
+    background-color:var(--bg-color);
     background-size:auto;
     background-position:center;
   }
@@ -700,19 +767,36 @@ button {
 .otros p {
     font-size: 1.5rem;
     padding-top: .3rem;
-    padding-right:5px;
-    padding-left: 22px;
-    width: 95%;
+    padding: 0;
+    width: 100%;
     text-shadow: 0px 0px  black;
+    color: var(--second-bg-color-color);
 }
 
 .skills .skills-content p {
     font-size: 1.5rem;
     padding-top: .5rem;
-    width: 95%;
-    padding-left: 22px;
-    padding-right: 5px;
+    width: 100%;
+    padding: 0;
+    
     }
+
+.educacion-column .titles{
+    color: var(--main-color)
+}
+
+.skills-content p{
+    margin-bottom: -2rem ;
+    color: var(--second-bg-color);
+}
+
+.educacion-column img {
+    display: block;
+    margin: 20px auto; /* centra horizontal */
+    width: 300px;
+    height: auto; /* 🔥 importante para que no se deforme */
+}
+
 
 
 
@@ -801,8 +885,10 @@ video {
 }
 .medio{
     padding-top: 0px;
-    width: 85%;
-    height: auto;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    
     margin: auto;
     display: block;
     border-radius: 10px ;

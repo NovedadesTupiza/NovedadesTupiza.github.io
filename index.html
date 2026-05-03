@@ -194,7 +194,7 @@
                         <div class="content">
                             <div class=""><i class=""></i></div>
                             
-                            <h3>PIJAMAS NIÑO TALLA 6 - 7 - 8</h3>
+                            <h3>PIJAMA TALLA 6 - 7 - 8</h3>
                              <img src="images/7.PijamaOso.png" alt="" width="300px" height="300px">
                               
                             <p>Convierte cada noche en un momento especial 💫
@@ -207,12 +207,13 @@
                     <img class= ""src="" alt="">
 
                     <div class="video-container">
-                        <video src="videos/7.1 Vidoso.mp4" autoplay muted loop playsinline></video>
+                        <video id="miVideo" src="videos/7.1 Vidoso.mp4" autoplay muted loop playsinline></video>
                     </div>
+                    <button onclick="activarSonido()">Sonido</button>
                     
                            <hr>
 
-                            <h3>PIJAMAS NIÑA TALLA 6 - 7 - 8</h3>
+                            <h3>PIJAMA TALLA 6 - 7 - 8</h3>
                     
                              
                               <img src="images/8.PijamaPinguino.png" alt="" width="300px" height="300px">
@@ -227,8 +228,9 @@
                     <img class= ""src="" alt="">
 
                     <div class="video-container">
-                        <video src="videos/8.videopinguino.mp4" autoplay muted loop playsinline></video>
+                        <video id="miVideo" src="videos/8.videopinguino.mp4" autoplay muted loop playsinline></video>
                     </div>
+                    <button onclick="activarSonido()">Activar sonido</button>
 
                     <div class="educacion-content">
                         <div class="content">
@@ -567,9 +569,16 @@ const observer = new IntersectionObserver(entries => {
 });
 
 videos.forEach(video => {
-    video.muted = true; // necesario para autoplay
     observer.observe(video);
 });
+</script>
+
+<script>
+function activarSonido() {
+    const video = document.getElementById("miVideo");
+    video.muted = false;
+    video.play();
+}
 </script>
 
 </body>

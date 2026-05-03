@@ -921,6 +921,7 @@ img:hover{
     overflow: hidden;
     border-radius: 10px;
     box-shadow: -5px 5px 10px rgba(0,0,0,0.5);
+    position: relative;
 }
 
 .video-container video {
@@ -941,8 +942,30 @@ video {
     height: auto;
     display: block;
     
-    
 }
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #49C692;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.video-container button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+button:hover {
+    background-color: #2e9e75;
+}
+
 .medio{
     padding-top: 0px;
     width: 100%;

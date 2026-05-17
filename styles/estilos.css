@@ -270,7 +270,7 @@ section {
 }
 
 .btn-box .btn {
-    position: absolute;
+    
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -956,6 +956,8 @@ button {
     font-size: 1.4rem;
     cursor: pointer;
     transition: 0.3s;
+    position: relative;
+    
 }
 
 .video-container button {

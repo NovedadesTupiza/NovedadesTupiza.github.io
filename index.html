@@ -198,7 +198,7 @@
                     <div class="video-container">
                     <video id="video1" src="videos/6. VidCapi.mp4" autoplay muted loop playsinline preload="none"></video>
                     </div>
-                    <button onclick="activarSonido('video1')">Activar</button>
+                    <button onclick="activarSonido('video1')">Activar Sonido</button>
                     
 
                     <div class="educacion-content">
@@ -206,7 +206,7 @@
                             <div class=""><i class=""></i></div>
                             
                             <h3>PIJAMAS TALLA 6 - 7 - 8</h3>
-                             <img src="images/7.PijamaOso.png" alt="" width="300px" height="300px">
+                             <img src="images/7.PijamaOso.png" alt="" width="300px" height="auto">
                               
                             <p>Convierte cada noche en un momento especial 💫
                            <br>Nuestras pijamas ultra suaves envuelven a los más pequeños en comodidad, calidez y amor 🧸
@@ -552,19 +552,31 @@ videos.forEach(video => {
 </script>
 
 
-
-</script>
-
 <script>
 function activarSonido(id) {
 
     // apagar todos los videos
     document.querySelectorAll("video").forEach(v => v.muted = true);
+    // silenciar todos
+    document.querySelectorAll("video").forEach(v => {
+        v.muted = true;
+        v.pause();
+    });
 
-    // activar solo el seleccionado
+    // activar el seleccionado
     const video = document.getElementById(id);
-    video.muted = false;
+
+    vvideo.muted = false;
     video.play();
+    video.volume = 1;
+
+    video.play()
+        .then(() => {
+            console.log("Audio activado");
+        })
+        .catch(error => {
+            console.log("Error al reproducir:", error);
+        });
 }
 </script>
 
